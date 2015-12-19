@@ -1,0 +1,60 @@
+.logo {
+	float: left;
+	height: 48px;
+	line-height: 48px;
+	font-size: 20px;
+	font-weight: bold;
+	color: white;
+	margin: 0 0 0 16px;
+	padding: 0;
+}
+
+.userinfo {
+	float: right;
+	height: 48px;
+	line-height:48px;
+	margin: 0 16px 0 0;
+	padding: 0;
+	color: white;
+}
+
+.userinfo a {
+	color: white;
+	text-decoration: none;
+}
+
+.userinfo a:hover {
+	text-decoration: underline;
+}
+
+.textbox {
+	height: 22px;
+	padding: 0 2px;
+}
+
+.dialog-button {
+	text-align: center;
+}
+
+#modifypwd {
+	padding: 6px 18px 16px 18px;
+}
+
+#modifypwd p {
+	margin: 15px 0 0 0;
+}
+
+#functions p {
+	padding: 6px 0px 6px 8px;
+	margin: 2px 5px;
+	cursor: pointer;
+	border: 1px solid white;
+	font-family: Tahoma,Verdana,微软雅黑,新宋体;
+}
+
+#functions p:hover {
+	border: 1px solid #99BBE8;
+	background: #E0ECFF;
+	color: #416AA3;
+	font-weight: bold;
+}

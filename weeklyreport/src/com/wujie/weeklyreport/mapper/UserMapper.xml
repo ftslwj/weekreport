@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wujie.weeklyreport.mapper.UserMapper">
+	<select id="getUserByLoginNameAndPassword" resultType="com.wujie.weeklyreport.po.User">
+		select * from wr_user where loginname=#{loginname, jdbcType=VARCHAR} and password=#{password, jdbcType=VARCHAR}
+	</select>
+	
+	<update id="modifyPassword">
+		update wr_user set password=#{password, jdbcType=VARCHAR} where id=#{id, jdbcType=BIGINT}
+	</update>
+	
+	<select id="getUsers" resultType="com.wujie.weeklyreport.po.User">
+		select * from wr_user
+		<if test="limit>0">
+			limit #{offset, jdbcType=INTEGER},#{limit, jdbcType=INTEGER}
+		</if>
+	</select>
+	
+	<select id="getUserCount" resultType="int">
+		select count(*) from wr_user
+	</select>
+</mapper>

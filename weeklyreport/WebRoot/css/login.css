@@ -1,0 +1,18 @@
+#login {
+	padding: 6px 0 10px 0;
+}
+
+p {
+	height: 32px;
+	line-height: 32px;
+	padding: 8px 25px 0 25px;
+}
+
+.textbox {
+	height: 22px;
+	padding: 0 2px;
+}
+
+.dialog-button {
+	text-align: center;
+}

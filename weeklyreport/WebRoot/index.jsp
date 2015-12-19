@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -21,6 +22,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    This is my JSP page. <br>
+  
+    <c:choose>
+    	<c:when test="${!empty sessionScope.user && sessionScope.user.status == 0}">
+    		<jsp:forward page="/WEB-INF/jsp/adminmainpage.jsp"></jsp:forward>
+    	</c:when>
+    	<c:otherwise>
+    		<jsp:forward page="/WEB-INF/jsp/login.jsp"></jsp:forward>
+    	</c:otherwise>
+    </c:choose>
   </body>
 </html>
